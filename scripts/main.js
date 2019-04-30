@@ -20,7 +20,7 @@ let bigSpenderHtml = () => {
         let elementHtml = `<div>
                             <h2>${spender.companyName}</h2>
                             <p>${spender.addressFullStreet}</h2>
-                            <p>${spender.orders}</p>
+                            <p>${spender.orders.join(", ")}</p>
                             <hr>
                         </div>`
 
