@@ -15,3 +15,17 @@ const bigSpenders = businesses.filter(business => {
 })
 console.log("The Big Spenders", bigSpenders)
 
+let bigSpenderHtml = () => {
+    bigSpenders.forEach(spender => {
+        let elementHtml = `<div>
+                            <h2>${spender.companyName}</h2>
+                            <p>${spender.addressFullStreet}</h2>
+                            <p>${spender.orders}</p>
+                            <hr>
+                        </div>`
+
+        outputEl.innerHTML += elementHtml;
+        return spender
+    })
+}
+bigSpenderHtml()
